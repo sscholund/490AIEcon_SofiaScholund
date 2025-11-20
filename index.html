@@ -1,10 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My AI490 Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sofia Scholund | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f5f2;
+      --card: #ffffff;
+      --text: #2c1a1b;
+      --muted: #6b4c4c;
+      --accent: #7b1d22;
+      --accent-2: #9c2f35;
+      --border: #e3d6d2;
+      --radius: 16px;
+      --shadow: 0 10px 30px rgba(44, 26, 27, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'DM Sans', 'Segoe UI', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      padding: 30px 16px 50px;
+    }
+
+    .container {
+      width: min(1140px, 100%);
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.6rem, 4vw, 3.2rem);
+      letter-spacing: -0.02em;
+    }
+
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    .section-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    @media (max-width: 800px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .avatar-wrap {
+      display: grid;
+      place-items: center;
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      background: #f2e7e6;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .placeholder-note {
+      font-size: 0.95rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    .about-text h2 {
+      margin: 0 0 10px;
+      font-size: 1.35rem;
+    }
+
+    .about-text p {
+      margin: 0 0 12px;
+      line-height: 1.7;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+    }
+
+    .card-link {
+      text-decoration: none;
+    }
+
+    .action-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+      box-shadow: var(--shadow);
+      transition: transform 140ms ease, box-shadow 140ms ease;
+    }
+
+    .action-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 36px rgba(15, 23, 42, 0.12);
+    }
+
+    .icon-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: #f2e7e6;
+      color: var(--accent);
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .action-card h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .action-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 16px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid var(--accent-2);
+      transition: background 140ms ease, box-shadow 140ms ease;
+      margin-top: 6px;
+    }
+
+    .btn:hover {
+      background: #6b161b;
+      box-shadow: 0 8px 20px rgba(123, 29, 34, 0.28);
+    }
+  </style>
 </head>
 <body>
-    <h1>Hello from my first webpage!</h1>
-    <p>This page will later host my coursework.</p>
-<body>
-</html> 
+  <div class="container">
+    <header>
+      <h1>Sofia Scholund</h1>
+      <p class="subtitle">Undergraduate Student, Managerial Economics | Interested in AI for business decisions</p>
+    </header>
+
+    <section class="section-card">
+      <div class="about-grid">
+        <div class="avatar-wrap">
+          <div class="avatar">
+            <img src="profile.jpg" alt="Profile photo of Sofia Scholund" loading="lazy">
+          </div>
+          <div class="placeholder-note">Save your photo as <strong>profile.jpg</strong> in this folder.</div>
+        </div>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>Welcome! I'm a Managerial Economics student exploring how AI and data analytics can guide strategic decisions. I enjoy turning complex data into clear, actionable insights for organizations.</p>
+          <p>Feel free to explore my resume and AI class projects below to learn more about my background and work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <a class="card-link" href="resume.pdf" target="_blank" rel="noopener">
+        <article class="action-card">
+          <div class="icon-circle">📄</div>
+          <h3>Resume</h3>
+          <p>View my academic background, experience, and skills.</p>
+          <span class="btn">View Resume</span>
+        </article>
+      </a>
+      <a class="card-link" href="project.html">
+        <article class="action-card">
+          <div class="icon-circle">📁</div>
+          <h3>Projects</h3>
+          <p>Explore my AI class project and related academic work.</p>
+          <span class="btn">View Projects</span>
+        </article>
+      </a>
+    </section>
+  </div>
+</body>
+</html>
